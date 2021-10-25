@@ -24,6 +24,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log In">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="7hd-81-uWS" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="s5C-Gn-Ug6"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjI-gn-VQn">
                                 <rect key="frame" x="45" y="373.5" width="324" height="34"/>
@@ -75,6 +78,51 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
         </scene>
+        <!--Account View Controller-->
+        <scene sceneID="5ZB-Dt-4Jh">
+            <objects>
+                <viewController id="7hd-81-uWS" customClass="AccountViewController" customModule="SB_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zCb-Fb-ZRY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKq-VY-mav">
+                                <rect key="frame" x="142.5" y="184" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFC-Xk-biF">
+                                <rect key="frame" x="187" y="237" width="40" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmN-gU-6yW">
+                                <rect key="frame" x="142" y="667" width="130" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log out">
+                                    <color key="baseForegroundColor" systemColor="systemGray6Color"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="agW-e7-HdK"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="OKq-VY-mav" firstAttribute="centerX" secondItem="agW-e7-HdK" secondAttribute="centerX" id="8d5-2K-6KA"/>
+                            <constraint firstItem="DFC-Xk-biF" firstAttribute="top" secondItem="OKq-VY-mav" secondAttribute="bottom" constant="32" id="E3N-dV-6EY"/>
+                            <constraint firstItem="OKq-VY-mav" firstAttribute="top" secondItem="agW-e7-HdK" secondAttribute="top" constant="140" id="FLl-0P-vxb"/>
+                            <constraint firstItem="agW-e7-HdK" firstAttribute="bottom" secondItem="QmN-gU-6yW" secondAttribute="bottom" constant="164" id="Z0o-il-7Z4"/>
+                            <constraint firstItem="DFC-Xk-biF" firstAttribute="centerX" secondItem="OKq-VY-mav" secondAttribute="centerX" id="c5E-S9-WTR"/>
+                            <constraint firstItem="QmN-gU-6yW" firstAttribute="centerX" secondItem="agW-e7-HdK" secondAttribute="centerX" id="lIm-VP-TPT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="D1P-lZ-gWQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pnP-8E-TNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728.98550724637687" y="69.642857142857139"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="AccentColor">
@@ -82,6 +130,9 @@
         </namedColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

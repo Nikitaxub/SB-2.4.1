@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8070D0527274F4300DCBAA2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8070D0427274F4300DCBAA2 /* AccountViewController.swift */; };
 		F85E5E8027273EC20088BCC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E5E7F27273EC20088BCC0 /* AppDelegate.swift */; };
 		F85E5E8227273EC20088BCC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E5E8127273EC20088BCC0 /* SceneDelegate.swift */; };
 		F85E5E8427273EC20088BCC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E5E8327273EC20088BCC0 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F8070D0427274F4300DCBAA2 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		F85E5E7C27273EC20088BCC0 /* SB-2.3.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SB-2.3.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85E5E7F27273EC20088BCC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F85E5E8127273EC20088BCC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				F85E5E8127273EC20088BCC0 /* SceneDelegate.swift */,
 				F85E5E8327273EC20088BCC0 /* ViewController.swift */,
 				F85E5E8527273EC20088BCC0 /* Main.storyboard */,
+				F8070D0427274F4300DCBAA2 /* AccountViewController.swift */,
 				F85E5E8827273EC30088BCC0 /* Assets.xcassets */,
 				F85E5E8A27273EC30088BCC0 /* LaunchScreen.storyboard */,
 				F85E5E8D27273EC30088BCC0 /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				F85E5E8427273EC20088BCC0 /* ViewController.swift in Sources */,
 				F85E5E8027273EC20088BCC0 /* AppDelegate.swift in Sources */,
+				F8070D0527274F4300DCBAA2 /* AccountViewController.swift in Sources */,
 				F85E5E8227273EC20088BCC0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
