@@ -17,42 +17,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiS-uu-TbC">
-                                <rect key="frame" x="161" y="425" width="93" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiS-uu-TbC">
+                                <rect key="frame" x="161" y="430.5" width="92.5" height="45.5"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log In">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhV-o3-zwM">
-                                <rect key="frame" x="20" y="499" width="150" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjI-gn-VQn">
+                                <rect key="frame" x="45" y="373.5" width="324" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ezB-yt-9SC">
+                                <rect key="frame" x="45" y="321.5" width="324" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhV-o3-zwM">
+                                <rect key="frame" x="45" y="500" width="141" height="29"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?" titleAlignment="automatic">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                </buttonConfiguration>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjI-gn-VQn">
-                                <rect key="frame" x="45" y="368" width="324" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ezB-yt-9SC">
-                                <rect key="frame" x="45" y="316" width="324" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdW-Z0-1Bi">
-                                <rect key="frame" x="254" y="499" width="140" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdW-Z0-1Bi">
+                                <rect key="frame" x="268" y="500" width="101" height="29"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="KhV-o3-zwM" firstAttribute="leading" secondItem="ezB-yt-9SC" secondAttribute="leading" id="3QT-vo-VEX"/>
+                            <constraint firstItem="aiS-uu-TbC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="3et-h9-Xc6"/>
+                            <constraint firstItem="hjI-gn-VQn" firstAttribute="trailing" secondItem="ezB-yt-9SC" secondAttribute="trailing" id="6Gv-6p-mD9"/>
+                            <constraint firstItem="ezB-yt-9SC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Cga-jp-xkn"/>
+                            <constraint firstItem="MdW-Z0-1Bi" firstAttribute="trailing" secondItem="ezB-yt-9SC" secondAttribute="trailing" id="Eg7-Ko-bKJ"/>
+                            <constraint firstItem="ezB-yt-9SC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="HEi-Rd-CLf"/>
+                            <constraint firstItem="MdW-Z0-1Bi" firstAttribute="top" secondItem="aiS-uu-TbC" secondAttribute="bottom" constant="24" id="J9j-x5-twh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ezB-yt-9SC" secondAttribute="trailing" constant="45" id="MZ4-SX-fmQ"/>
+                            <constraint firstItem="hjI-gn-VQn" firstAttribute="leading" secondItem="ezB-yt-9SC" secondAttribute="leading" id="SSl-c2-1n7"/>
+                            <constraint firstItem="aiS-uu-TbC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Xa2-ob-odq"/>
+                            <constraint firstItem="KhV-o3-zwM" firstAttribute="top" secondItem="aiS-uu-TbC" secondAttribute="bottom" constant="24" id="oPj-M2-Tqm"/>
+                            <constraint firstItem="hjI-gn-VQn" firstAttribute="top" secondItem="ezB-yt-9SC" secondAttribute="bottom" constant="18" id="qyJ-Bk-bcg"/>
+                            <constraint firstItem="aiS-uu-TbC" firstAttribute="top" secondItem="hjI-gn-VQn" secondAttribute="bottom" constant="23" id="x8X-14-hKM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
