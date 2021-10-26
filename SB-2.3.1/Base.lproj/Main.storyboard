@@ -28,15 +28,15 @@
                                     <segue destination="7hd-81-uWS" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="s5C-Gn-Ug6"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjI-gn-VQn">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjI-gn-VQn">
                                 <rect key="frame" x="45" y="373.5" width="324" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ezB-yt-9SC">
                                 <rect key="frame" x="45" y="321.5" width="324" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhV-o3-zwM">
                                 <rect key="frame" x="45" y="500" width="141" height="29"/>
@@ -45,6 +45,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                     <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgotUsernamePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZIx-QN-Bry"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdW-Z0-1Bi">
                                 <rect key="frame" x="268" y="500" width="101" height="29"/>
@@ -53,6 +56,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                     <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgotPasswordPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ucu-t1-szA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -73,6 +79,10 @@
                             <constraint firstItem="aiS-uu-TbC" firstAttribute="top" secondItem="hjI-gn-VQn" secondAttribute="bottom" constant="23" id="x8X-14-hKM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordOutlet" destination="hjI-gn-VQn" id="4Uo-Lw-4EZ"/>
+                        <outlet property="usernameOutlet" destination="ezB-yt-9SC" id="2Ql-oM-V8M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,6 +114,10 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
                                     <color key="baseForegroundColor" systemColor="systemGray6Color"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutButtonPressed" destination="7hd-81-uWS" eventType="touchUpInside" id="15R-fp-aW9"/>
+                                    <segue destination="cND-Qa-fKj" kind="unwind" unwindAction="unwindFor:" id="lGu-Yu-jae"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="agW-e7-HdK"/>
@@ -118,8 +132,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D1P-lZ-gWQ"/>
+                    <connections>
+                        <outlet property="welcomeOutlet" destination="OKq-VY-mav" id="qF5-bk-349"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pnP-8E-TNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="cND-Qa-fKj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="728.98550724637687" y="69.642857142857139"/>
         </scene>
