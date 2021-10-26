@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard (usernameOutlet.text == "Nik" || usernameOutlet.text == "Nikita"), passwordOutlet.text == "password" else {
-            showAlert(title: "Invalid username or password", message: "Please enter correct username or password")
+            showAlert(title: "Invalid username or password", message: "Please enter correct username and password")
             passwordOutlet.text = ""
             return
         }
@@ -50,7 +50,20 @@ extension ViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameOutlet {
+            passwordOutlet.becomeFirstResponder()
+        } else {
+            usernameOutlet.becomeFirstResponder()
+            performSegue(withIdentifier: "loginToAccountSegue", sender: nil)
+        }
+  
+        return false
     }
 }
