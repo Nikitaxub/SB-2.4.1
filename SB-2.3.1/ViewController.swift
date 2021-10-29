@@ -9,25 +9,28 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - IB Outlets
     @IBOutlet var usernameOutlet: UITextField!
     @IBOutlet var passwordOutlet: UITextField!
-    
+        
+    // MARK: - Life circle methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard (usernameOutlet.text == "Nik" || usernameOutlet.text == "Nikita"), passwordOutlet.text == "password" else {
-            showAlert(title: "Invalid username or password", message: "Please enter correct username and password")
-            passwordOutlet.text = ""
-            return
-        }
         guard let accountVC = segue.destination as? AccountViewController else { return }
         accountVC.username = usernameOutlet.text!
     }
     
+    // MARK: - IB Actions
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
-        guard let _ = unwindSegue.source as? AccountViewController else { return }
         usernameOutlet.text = ""
         passwordOutlet.text = ""
     }
@@ -39,28 +42,32 @@ class ViewController: UIViewController {
     @IBAction func forgotPasswordPressed() {
         showAlert(title: "Oops!", message: "Your password is password 🤔")
     }
-}
-
-extension ViewController {
+    
+    @IBAction func loginButtonPressed() {
+        guard (usernameOutlet.text == "Nik" || usernameOutlet.text == "Nikita"), passwordOutlet.text == "password" else {
+            showAlert(title: "Invalid username or password", message: "Please enter correct username and password")
+            passwordOutlet.text = ""
+            return
+        }
+    }
+    
+    // MARK: - Private methods
     private func showAlert(title: String, message: String) -> Void {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
 }
 
+// MARK: - Text field delegate
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == usernameOutlet {
             passwordOutlet.becomeFirstResponder()
         } else {
             usernameOutlet.becomeFirstResponder()
+            loginButtonPressed()
             performSegue(withIdentifier: "loginToAccountSegue", sender: nil)
         }
   

@@ -18,7 +18,4 @@ class AccountViewController : UIViewController {
         welcomeOutlet.text = "Welcome, \(username)!"
     }
     
-    @IBAction func logoutButtonPressed() {
-        dismiss(animated: true)
-    }
 }
