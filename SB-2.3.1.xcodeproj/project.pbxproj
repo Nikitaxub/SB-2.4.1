@@ -58,16 +58,56 @@
 		F85E5E7E27273EC20088BCC0 /* SB-2.3.1 */ = {
 			isa = PBXGroup;
 			children = (
-				F85E5E7F27273EC20088BCC0 /* AppDelegate.swift */,
-				F85E5E8127273EC20088BCC0 /* SceneDelegate.swift */,
-				F85E5E8327273EC20088BCC0 /* ViewController.swift */,
-				F85E5E8527273EC20088BCC0 /* Main.storyboard */,
-				F8070D0427274F4300DCBAA2 /* AccountViewController.swift */,
-				F85E5E8827273EC30088BCC0 /* Assets.xcassets */,
+				F8B47B8E272D9A2C00047337 /* Models */,
+				F8B47B8B272D999C00047337 /* ViewControllers */,
+				F8B47B8D272D9A0800047337 /* Storyboards */,
+				F8B47B8A272D998D00047337 /* Configs */,
+				F8B47B8C272D99A800047337 /* Resources */,
 				F85E5E8A27273EC30088BCC0 /* LaunchScreen.storyboard */,
-				F85E5E8D27273EC30088BCC0 /* Info.plist */,
 			);
 			path = "SB-2.3.1";
+			sourceTree = "<group>";
+		};
+		F8B47B8A272D998D00047337 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				F85E5E7F27273EC20088BCC0 /* AppDelegate.swift */,
+				F85E5E8127273EC20088BCC0 /* SceneDelegate.swift */,
+				F85E5E8D27273EC30088BCC0 /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		F8B47B8B272D999C00047337 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F85E5E8327273EC20088BCC0 /* ViewController.swift */,
+				F8070D0427274F4300DCBAA2 /* AccountViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F8B47B8C272D99A800047337 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F85E5E8827273EC30088BCC0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F8B47B8D272D9A0800047337 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F85E5E8527273EC20088BCC0 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F8B47B8E272D9A2C00047337 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +335,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y94WMCGB23;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SB-2.3.1/Info.plist";
+				INFOPLIST_FILE = "SB-2.3.1/Configs/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -307,7 +347,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xubuntus.SB-2-3-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xubuntus.SB-2-4-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -324,7 +364,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y94WMCGB23;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SB-2.3.1/Info.plist";
+				INFOPLIST_FILE = "SB-2.3.1/Configs/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -336,7 +376,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xubuntus.SB-2-3-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xubuntus.SB-2-4-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
