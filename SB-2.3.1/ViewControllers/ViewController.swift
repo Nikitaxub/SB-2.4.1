@@ -36,7 +36,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func forgotUsernamePressed() {
-        showAlert(title: "Oops!", message: "Your username is Nik or Nikita 🤫")
+        
+        showAlert(title: "Oops!", message: "\(db.getUsernames())")
     }
     
     @IBAction func forgotPasswordPressed() {
@@ -44,6 +45,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed() {
+//        for user in DB {
+//
+//        }
         guard (usernameOutlet.text == "Nik" || usernameOutlet.text == "Nikita"), passwordOutlet.text == "password" else {
             showAlert(title: "Invalid username or password", message: "Please enter correct username and password")
             passwordOutlet.text = ""
