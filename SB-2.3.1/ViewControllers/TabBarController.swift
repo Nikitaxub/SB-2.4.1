@@ -10,4 +10,10 @@ import UIKit
 class TabBarController : UITabBarController {
     
     var user = User()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tabBar.items?[1].title = user.fullname
+        self.tabBar.unselectedItemTintColor = UIColor.black
+    }
 }

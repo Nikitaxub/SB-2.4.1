@@ -9,14 +9,10 @@ import UIKit
 
 class AccountViewController : UIViewController {
     
-    @IBOutlet var welcomeOutlet: UILabel!
-    
-    var username = ""
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = self.tabBarController as? TabBarController else { return }
-        welcomeOutlet.text = "Welcome, \n\(tabBarController.user.fullname)!"
+        let backItem = UIBarButtonItem()
+        backItem.title = tabBarController.user.fullname
+        navigationItem.backBarButtonItem = backItem
     }
-    
 }

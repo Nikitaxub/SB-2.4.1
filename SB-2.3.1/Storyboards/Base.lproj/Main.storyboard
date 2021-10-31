@@ -3,16 +3,17 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SB_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="SB_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="5ZB-Dt-4Jh">
             <objects>
-                <viewController id="7hd-81-uWS" customClass="AccountViewController" customModule="SB_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7hd-81-uWS" customClass="WelcomeViewController" customModule="SB_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zCb-Fb-ZRY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,7 +128,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="agW-e7-HdK"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
                             <constraint firstItem="OKq-VY-mav" firstAttribute="centerX" secondItem="agW-e7-HdK" secondAttribute="centerX" id="8d5-2K-6KA"/>
                             <constraint firstItem="DFC-Xk-biF" firstAttribute="top" secondItem="OKq-VY-mav" secondAttribute="bottom" constant="32" id="E3N-dV-6EY"/>
@@ -137,7 +138,9 @@
                             <constraint firstItem="QmN-gU-6yW" firstAttribute="centerX" secondItem="agW-e7-HdK" secondAttribute="centerX" id="lIm-VP-TPT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="person.fill.turn.right" catalog="system" id="CRG-gw-7fi"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="CRG-gw-7fi">
+                        <imageReference key="image" image="rosette" catalog="system"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="D1P-lZ-gWQ"/>
                     <connections>
                         <outlet property="welcomeOutlet" destination="OKq-VY-mav" id="qF5-bk-349"/>
@@ -148,34 +151,125 @@
             </objects>
             <point key="canvasLocation" x="1771" y="-327"/>
         </scene>
+        <!--Account View Controller-->
+        <scene sceneID="YZP-sV-Mzb">
+            <objects>
+                <viewController id="qoB-iy-7TA" customClass="AccountViewController" customModule="SB_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QmQ-D9-b5A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jA3-sv-aN2">
+                                <rect key="frame" x="163" y="433" width="90" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Biography"/>
+                                <connections>
+                                    <segue destination="Ks1-xo-MHX" kind="show" id="7rK-iQ-J2G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r9f-yA-hy3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jA3-sv-aN2" firstAttribute="centerX" secondItem="r9f-yA-hy3" secondAttribute="centerX" id="C3S-WG-Jvh"/>
+                            <constraint firstItem="jA3-sv-aN2" firstAttribute="centerY" secondItem="r9f-yA-hy3" secondAttribute="centerY" id="Ex4-t6-bvD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IUG-Ne-YRg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ufG-uO-tge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2535" y="375"/>
+        </scene>
+        <!--Biography Controller-->
+        <scene sceneID="mru-MT-70I">
+            <objects>
+                <viewController id="Ks1-xo-MHX" customClass="BiographyController" customModule="SB_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B3Y-o1-hEO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9b-fp-YeM">
+                                <rect key="frame" x="20" y="440.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UHz-kX-Txz"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="UHz-kX-Txz" firstAttribute="trailing" secondItem="h9b-fp-YeM" secondAttribute="trailing" constant="20" id="H69-DT-hkO"/>
+                            <constraint firstItem="h9b-fp-YeM" firstAttribute="centerY" secondItem="UHz-kX-Txz" secondAttribute="centerY" id="Knd-Yv-bPm"/>
+                            <constraint firstItem="h9b-fp-YeM" firstAttribute="leading" secondItem="UHz-kX-Txz" secondAttribute="leading" constant="20" id="YX1-l9-hMH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oPr-Dx-nOF"/>
+                    <connections>
+                        <outlet property="biographyTextOutlet" destination="h9b-fp-YeM" id="XPV-Lz-n3q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iTD-GD-V8B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3360.8695652173915" y="375"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Y4Y-20-AMz">
             <objects>
                 <tabBarController id="IIc-BE-5OU" customClass="TabBarController" customModule="SB_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="person.fill.turn.right" catalog="system" id="N2h-Ah-IoY">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N2h-Ah-IoY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="7hd-81-uWS" kind="relationship" relationship="viewControllers" id="N4d-m6-egV"/>
+                        <segue destination="7hd-81-uWS" kind="relationship" relationship="viewControllers" id="l5W-h1-Ykn"/>
+                        <segue destination="Yzy-kd-Z3f" kind="relationship" relationship="viewControllers" id="cKA-78-Jme"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDl-gv-MSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="801" y="70"/>
         </scene>
+        <!--Fullname-->
+        <scene sceneID="8Q4-PK-zaU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yzy-kd-Z3f" customClass="NavigationController" customModule="SB_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Fullname" image="person.circle" catalog="system" id="LyQ-L0-nWV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uq7-OF-C1w">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qoB-iy-7TA" kind="relationship" relationship="rootViewController" id="Dkl-k0-5DL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nDB-FY-q39" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="375"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="person.fill.turn.right" catalog="system" width="128" height="107"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="rosette" catalog="system" width="106" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

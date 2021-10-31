@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController : UIViewController {
     
     // MARK: - IB Outlets
     @IBOutlet var usernameOutlet: UITextField!
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func forgotPasswordPressed() {
-        guard let username = usernameOutlet.text else {
+        guard let username = usernameOutlet.text, username != "" else {
             showAlert(title: "Empty username", message: "Please enter your username")
             return
         }
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - Text field delegate
-extension ViewController: UITextFieldDelegate {
+extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == usernameOutlet {
             passwordOutlet.becomeFirstResponder()
