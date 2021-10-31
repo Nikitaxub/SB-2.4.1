@@ -25,8 +25,8 @@ class ViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let accountVC = segue.destination as? AccountViewController else { return }
-        accountVC.username = usernameOutlet.text!
+        guard let tabBarController = segue.destination as? TabBarController else { return }
+        tabBarController.user = db.getUser(forUsername: usernameOutlet.text!)
     }
     
     // MARK: - IB Actions
@@ -36,19 +36,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func forgotUsernamePressed() {
-        
         showAlert(title: "Oops!", message: "\(db.getUsernames())")
     }
     
     @IBAction func forgotPasswordPressed() {
-        showAlert(title: "Oops!", message: "Your password is password 🤔")
+        guard let username = usernameOutlet.text else {
+            showAlert(title: "Empty username", message: "Please enter your username")
+            return
+        }
+        showAlert(title: "Oops!", message: "\(db.getPassword(forUsername: username))")
     }
     
     @IBAction func loginButtonPressed() {
-//        for user in DB {
-//
-//        }
-        guard (usernameOutlet.text == "Nik" || usernameOutlet.text == "Nikita"), passwordOutlet.text == "password" else {
+        if !db.authenticate(forUsername: usernameOutlet.text!, andPassword: passwordOutlet.text!) {
             showAlert(title: "Invalid username or password", message: "Please enter correct username and password")
             passwordOutlet.text = ""
             return
@@ -72,7 +72,7 @@ extension ViewController: UITextFieldDelegate {
         } else {
             usernameOutlet.becomeFirstResponder()
             loginButtonPressed()
-            performSegue(withIdentifier: "loginToAccountSegue", sender: nil)
+            performSegue(withIdentifier: "tabBarSegue", sender: nil)
         }
   
         return false

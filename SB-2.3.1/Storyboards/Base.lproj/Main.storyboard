@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SB_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiS-uu-TbC">
-                                <rect key="frame" x="114" y="217.5" width="92.5" height="45.5"/>
+                                <rect key="frame" x="161" y="430.5" width="92.5" height="45.5"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log In">
@@ -26,11 +26,11 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ss-wV-mdf"/>
-                                    <segue destination="7hd-81-uWS" kind="presentation" identifier="loginToAccountSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="s5C-Gn-Ug6"/>
+                                    <segue destination="IIc-BE-5OU" kind="presentation" identifier="tabBarSegue" modalPresentationStyle="fullScreen" id="gyc-AU-pdt"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjI-gn-VQn">
-                                <rect key="frame" x="45" y="160.5" width="230" height="34"/>
+                                <rect key="frame" x="45" y="373.5" width="324" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <connections>
@@ -38,7 +38,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ezB-yt-9SC">
-                                <rect key="frame" x="45" y="108.5" width="230" height="34"/>
+                                <rect key="frame" x="45" y="321.5" width="324" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                 <connections>
@@ -95,22 +95,22 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
         </scene>
-        <!--Account View Controller-->
+        <!--Item-->
         <scene sceneID="5ZB-Dt-4Jh">
             <objects>
                 <viewController id="7hd-81-uWS" customClass="AccountViewController" customModule="SB_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zCb-Fb-ZRY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKq-VY-mav">
-                                <rect key="frame" x="95.5" y="140" width="129" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKq-VY-mav">
+                                <rect key="frame" x="143" y="184" width="128.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFC-Xk-biF">
-                                <rect key="frame" x="140" y="193" width="40" height="42"/>
+                                <rect key="frame" x="187" y="236.5" width="40" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -137,6 +137,7 @@
                             <constraint firstItem="QmN-gU-6yW" firstAttribute="centerX" secondItem="agW-e7-HdK" secondAttribute="centerX" id="lIm-VP-TPT"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="person.fill.turn.right" catalog="system" id="CRG-gw-7fi"/>
                     <navigationItem key="navigationItem" id="D1P-lZ-gWQ"/>
                     <connections>
                         <outlet property="welcomeOutlet" destination="OKq-VY-mav" id="qF5-bk-349"/>
@@ -145,10 +146,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pnP-8E-TNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="cND-Qa-fKj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="728.98550724637687" y="69.642857142857139"/>
+            <point key="canvasLocation" x="1771" y="-327"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Y4Y-20-AMz">
+            <objects>
+                <tabBarController id="IIc-BE-5OU" customClass="TabBarController" customModule="SB_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="person.fill.turn.right" catalog="system" id="N2h-Ah-IoY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7hd-81-uWS" kind="relationship" relationship="viewControllers" id="N4d-m6-egV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDl-gv-MSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="70"/>
         </scene>
     </scenes>
     <resources>
+        <image name="person.fill.turn.right" catalog="system" width="128" height="107"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

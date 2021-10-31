@@ -8,17 +8,17 @@
 import Foundation
 
 struct User {
-    var username: String
-    var password: String
-    var fullname: String
-    var bio: String
+    var username: String = ""
+    var password: String = ""
+    var fullname: String = ""
+    var bio: String = ""
 }
 
 struct DB {
     var users: [User]
     
     func getUsernames() -> String {
-        guard users.count > 0 else { return "no user is found"}
+        guard users.count > 0 else { return "No user is found"}
         var usernames = "Your username is "
         for user in users.enumerated() {
             if user.offset > 0 {
@@ -27,6 +27,33 @@ struct DB {
             usernames += user.element.username
         }
         return "\(usernames) 🤫"
+    }
+    
+    func getPassword(forUsername: String) -> String {
+        for user in users {
+            if user.username == forUsername {
+                return "Your password is \(user.password) 🤔"
+            }
+        }
+        return "A non-existent user is specified"
+    }
+    
+    func authenticate(forUsername: String, andPassword: String) -> Bool {
+        for user in users {
+            if user.username == forUsername && user.password == andPassword {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func getUser(forUsername: String) -> User {
+        for user in users {
+            if user.username == forUsername {
+                return user
+            }
+        }
+        return User()
     }
 }
 

@@ -15,7 +15,8 @@ class AccountViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeOutlet.text = "Welcome, \(username)!"
+        guard let tabBarController = self.tabBarController as? TabBarController else { return }
+        welcomeOutlet.text = "Welcome, \n\(tabBarController.user.fullname)!"
     }
     
 }
